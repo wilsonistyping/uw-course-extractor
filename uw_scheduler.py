@@ -7,7 +7,7 @@ from helpers import *
 
 # Initial setup
 output_file = "course_data.json"
-page_to_scrape = requests.get('https://www.washington.edu/students/timeschd/AUT2023/cse.html')
+page_to_scrape = requests.get('https://www.washington.edu/students/timeschd/WIN2024/design.html')
 soup = BeautifulSoup(page_to_scrape.text, "html.parser")
 
 courses = []
@@ -57,7 +57,9 @@ for table in tables:
         text = table.find('pre').text.strip()
         # pattern = r"(Restr)?\s*(\d+)?\s+(\w+)?\s+(\S+)?\s+(\w+)?\s+(\S+)?\s+(\w+)?\s+(\S+)?\s+(.+?)?\s+(Open|Closed|\d+)?\s+(\d+)/ *(\S+)?(.*)?"
         # pattern = r"(Restr)?\s*(\d+)?\s+(\w+)?\s+(\S+)?\s+(to be arranged|\w+)?\s+(\S+)?\s+(\w+)?\s+(\S+)?\s+(.+?)?\s+(Open|Closed|\d+)?\s+(\d+)/ *(\S+)?(.*)?"
-        pattern = r"(Restr)?\s*(\d+)?\s+(\w+)?\s+(\S+)?\s+(to be arranged|\w+)?\s+(\d+-\d+)?\s+([A-Z]+)?\s+(\d+)?\s+(.+?)?\s+(Open|Closed|\d+)?\s+(\d+)/ *(\S+)?(.*)?"
+        # pattern = r"(Restr)?\s*(\d+)?\s+(\w+)?\s+(\S+)?\s+(to be arranged|\w+)?\s+(\d+-\d+)?\s+([A-Z]+)?\s+(\d+)?\s+(.+?)?\s+(Open|Closed|\d+)?\s+(\d+)/ *(\S+)?(.*)?"
+        # pattern = r"(Restr)?\s*(\d+)?\s+(\w+)?\s+(\S+)?\s+(to be arranged|\w+)?\s+(\d+-\d+)?\s+([A-Z]+)?\s+(\d+)?\s+(.+?)?\s+(.*?)(?:Open|Closed|\d)\s+(\d+)/ *(\S+)?(.*)?"
+        pattern = r"(Restr)?\s*(\d+)?\s+(\w+)?\s+(\S+)?\s+(to be arranged|\w+)?\s+(\d+-\d+)?\s+([A-Z]+)?\s+(\d+)?\s+(.+?)(?:Open|Closed|\d)?\s+(Open|Closed|\d+)?\s+(\d+)/ *(\S+)?(.*)?"
         matches = re.match(pattern, text)
 
         if matches:
