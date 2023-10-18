@@ -6,8 +6,11 @@ import re
 from helpers import *
 
 # Initial setup
-output_file = "course_data.json"
-page_to_scrape = requests.get('https://www.washington.edu/students/timeschd/WIN2024/design.html')
+filepath = "course_data/"
+subject = "cse"
+quarter = "AUT2023"
+output_file = f"{filepath}{subject}.json"
+page_to_scrape = requests.get(f'https://www.washington.edu/students/timeschd/{quarter}/{subject}.html')
 soup = BeautifulSoup(page_to_scrape.text, "html.parser")
 
 courses = []
@@ -52,47 +55,58 @@ for table in tables:
         # 'grades'
         # 'course_fee"
         # 'other"
+       
+        # making an assumption that properties will always be 
+        # within a certain index range due to the nature of <pre>,
+        # and extracting properties based on that assumption
+        text = table.find('pre').text
+
+        restrictions = text[0:7].strip()
+        sln = text[7:14].strip()
+        section_id = text[14:17].strip()
+        credits = text[17:25].strip()
+
+        if (text[25:43].strip() == 'to be arranged'):
+            dates = 'TBD'
+            times = 'TBD'
+        else:
+            dates = text[25:32].strip()
+            times = text[32:43].strip()
+
+        building = text[43:48].strip()
+        room = text[48:57].strip()
+        instructor = text[57:84].strip()
+        status = text[84:91].strip()
+        enrollment = text[91:95].strip()
+        enrollment_limit = text[96:101].strip()
+        grading = text[101:108].strip()
+        course_fee = text[108:115].strip()
+
+        other = text[115:].strip()
+        # formatting for 'other'
+        lines = other.splitlines()
+        stripped_lines = [line.strip() for line in lines]
+        other = '\r\n'.join(stripped_lines)
+
+        current_course['sections'].append({
+            'SLN': sln,
+            'restrictions': restrictions,
+            'section_id': section_id,
+            'credits': credits,
+            'dates': dates,
+            'times': times,
+            'building': building,
+            'room': room,
+            'instructor': instructor,
+            'status': status,
+            'enrollment': enrollment,
+            'enrollment_limit': enrollment_limit,
+            'grading': grading,
+            'course_fee': course_fee,
+            'other': other,
+            'raw_string': table.find('pre').text
+        })
         
-        # jesus christ don't ask about the regex pattern
-        text = table.find('pre').text.strip()
-        # pattern = r"(Restr)?\s*(\d+)?\s+(\w+)?\s+(\S+)?\s+(\w+)?\s+(\S+)?\s+(\w+)?\s+(\S+)?\s+(.+?)?\s+(Open|Closed|\d+)?\s+(\d+)/ *(\S+)?(.*)?"
-        # pattern = r"(Restr)?\s*(\d+)?\s+(\w+)?\s+(\S+)?\s+(to be arranged|\w+)?\s+(\S+)?\s+(\w+)?\s+(\S+)?\s+(.+?)?\s+(Open|Closed|\d+)?\s+(\d+)/ *(\S+)?(.*)?"
-        # pattern = r"(Restr)?\s*(\d+)?\s+(\w+)?\s+(\S+)?\s+(to be arranged|\w+)?\s+(\d+-\d+)?\s+([A-Z]+)?\s+(\d+)?\s+(.+?)?\s+(Open|Closed|\d+)?\s+(\d+)/ *(\S+)?(.*)?"
-        # pattern = r"(Restr)?\s*(\d+)?\s+(\w+)?\s+(\S+)?\s+(to be arranged|\w+)?\s+(\d+-\d+)?\s+([A-Z]+)?\s+(\d+)?\s+(.+?)?\s+(.*?)(?:Open|Closed|\d)\s+(\d+)/ *(\S+)?(.*)?"
-        pattern = r"(Restr)?\s*(\d+)?\s+(\w+)?\s+(\S+)?\s+(to be arranged|\w+)?\s+(\d+-\d+)?\s+([A-Z]+)?\s+(\d+)?\s+(.+?)(?:Open|Closed|\d)?\s+(Open|Closed|\d+)?\s+(\d+)/ *(\S+)?(.*)?"
-        matches = re.match(pattern, text)
-
-        if matches:
-            restrictions = matches.group(1)
-            SLN = matches.group(2)
-            section_id = matches.group(3)
-            credits = matches.group(4)
-            dates = matches.group(5)
-            times = matches.group(6)
-            building = matches.group(7)
-            room = matches.group(8)
-            instructor = matches.group(9)
-            status = matches.group(10)
-            enrollment = matches.group(11)
-            enrollment_limit = matches.group(12)
-            other = matches.group(13)
-
-            current_course['sections'].append({
-                'SLN': SLN,
-                'restrictions': restrictions,
-                'section_id': section_id,
-                'credits': credits,
-                'dates': dates,
-                'times': times,
-                'building': building,
-                'room': room,
-                'instructor': instructor,
-                'status': status,
-                'enrollment': enrollment,
-                'enrollment_limit': enrollment_limit,
-                'other': other,
-                'section_string': table.find('pre').text.strip()
-            })
 
 # Write to JSON file
 with open(output_file, "w") as json_file:
