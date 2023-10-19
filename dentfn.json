@@ -1,0 +1,596 @@
+[
+    {
+        "code": "DENTFN 520",
+        "title": "CARDIOVASCULAR",
+        "sections": [
+            {
+                "SLN": "13391",
+                "restrictions": "Restr",
+                "section_id": "A",
+                "credits": "4",
+                "dates": [
+                    [
+                        "M",
+                        "T",
+                        "Th",
+                        "F"
+                    ]
+                ],
+                "times": [
+                    "130-520"
+                ],
+                "building": [
+                    "HST"
+                ],
+                "room": [
+                    "T733"
+                ],
+                "instructor": [
+                    "Silverstein,Bruce D."
+                ],
+                "status": "Open",
+                "enrollment": "0",
+                "enrollment_limit": "55E",
+                "grading": "",
+                "course_fee": "",
+                "other": "",
+                "raw_string": "\nRestr  13391 A  4       MTThF  130-520    HST  T733     Silverstein,Bruce D.       Open      0/  55E               B     \r\n"
+            },
+            {
+                "SLN": "13392",
+                "restrictions": "Restr",
+                "section_id": "AA",
+                "credits": "QZ",
+                "dates": [
+                    [
+                        "M",
+                        "T",
+                        "Th",
+                        "F"
+                    ],
+                    [
+                        "M",
+                        "T",
+                        "Th",
+                        "F"
+                    ]
+                ],
+                "times": [
+                    "130-320",
+                    "330-520"
+                ],
+                "building": [
+                    "HST",
+                    "HST"
+                ],
+                "room": [
+                    "T474",
+                    "T478"
+                ],
+                "instructor": [
+                    "Silverstein,Bruce D.",
+                    "Silverstein,Bruce D."
+                ],
+                "status": "Open",
+                "enrollment": "0",
+                "enrollment_limit": "28E",
+                "grading": "",
+                "course_fee": "",
+                "other": "MTThF  330-520    HST  T478     Silverstein,Bruce D.",
+                "raw_string": "\nRestr  13392 AA  QZ     MTThF  130-320    HST  T474     Silverstein,Bruce D.       Open      0/  28E               B     \r\n                        MTThF  330-520    HST  T478     Silverstein,Bruce D.\n"
+            },
+            {
+                "SLN": "13393",
+                "restrictions": "Restr",
+                "section_id": "AB",
+                "credits": "QZ",
+                "dates": [
+                    [
+                        "M",
+                        "T",
+                        "Th",
+                        "F"
+                    ],
+                    [
+                        "M",
+                        "T",
+                        "Th",
+                        "F"
+                    ]
+                ],
+                "times": [
+                    "130-320",
+                    "330-520"
+                ],
+                "building": [
+                    "HST",
+                    "HST"
+                ],
+                "room": [
+                    "T498",
+                    "T498"
+                ],
+                "instructor": [
+                    "Silverstein,Bruce D.",
+                    "Silverstein,Bruce D."
+                ],
+                "status": "Open",
+                "enrollment": "0",
+                "enrollment_limit": "27E",
+                "grading": "",
+                "course_fee": "",
+                "other": "MTThF  330-520    HST  T498     Silverstein,Bruce D.",
+                "raw_string": "\nRestr  13393 AB  QZ     MTThF  130-320    HST  T498     Silverstein,Bruce D.       Open      0/  27E               B     \r\n                        MTThF  330-520    HST  T498     Silverstein,Bruce D.\n"
+            },
+            {
+                "SLN": "13394",
+                "restrictions": "Restr",
+                "section_id": "B",
+                "credits": "4",
+                "dates": [
+                    [
+                        "M",
+                        "T",
+                        "Th",
+                        "F"
+                    ]
+                ],
+                "times": [
+                    "130-520"
+                ],
+                "building": [
+                    "*"
+                ],
+                "room": [
+                    "*"
+                ],
+                "instructor": [
+                    "Silverstein,Bruce D."
+                ],
+                "status": "Open",
+                "enrollment": "0",
+                "enrollment_limit": "8E",
+                "grading": "",
+                "course_fee": "",
+                "other": "RIDE SECTION - TAUGHT IN SPOKANE.",
+                "raw_string": "\nRestr  13394 B  4       MTThF  130-520    *    *        Silverstein,Bruce D.       Open      0/   8E               B     \r\n                        RIDE SECTION - TAUGHT IN SPOKANE.                                                                                                                   \r\n"
+            },
+            {
+                "SLN": "13395",
+                "restrictions": "Restr",
+                "section_id": "BA",
+                "credits": "QZ",
+                "dates": [
+                    [
+                        "M",
+                        "T",
+                        "Th",
+                        "F"
+                    ]
+                ],
+                "times": [
+                    "130-520"
+                ],
+                "building": [
+                    "*"
+                ],
+                "room": [
+                    "*"
+                ],
+                "instructor": [
+                    "Silverstein,Bruce D."
+                ],
+                "status": "Open",
+                "enrollment": "0",
+                "enrollment_limit": "8E",
+                "grading": "",
+                "course_fee": "",
+                "other": "RIDE QUIZ SECTION - TAUGHT IN\r\nSPOKANE.",
+                "raw_string": "\nRestr  13395 BA  QZ     MTThF  130-520    *    *        Silverstein,Bruce D.       Open      0/   8E               B     \r\n                        RIDE QUIZ SECTION - TAUGHT IN                                                                                                                       \r\n                        SPOKANE.                                                                                                                                            \r\n"
+            }
+        ]
+    },
+    {
+        "code": "DENTFN 521",
+        "title": "INTRO DENT PUB HLTH",
+        "sections": [
+            {
+                "SLN": "13396",
+                "restrictions": "Restr",
+                "section_id": "A",
+                "credits": "2",
+                "dates": [
+                    [
+                        "T"
+                    ]
+                ],
+                "times": [
+                    "930-1220"
+                ],
+                "building": [
+                    "HST"
+                ],
+                "room": [
+                    "T733"
+                ],
+                "instructor": [
+                    "Chi,Donald L"
+                ],
+                "status": "Open",
+                "enrollment": "0",
+                "enrollment_limit": "55E",
+                "grading": "CR/NC",
+                "course_fee": "",
+                "other": "",
+                "raw_string": "\nRestr  13396 A  2       T      930-1220   HST  T733     Chi,Donald L               Open      0/  55E CR/NC         B     \r\n"
+            },
+            {
+                "SLN": "13397",
+                "restrictions": "Restr",
+                "section_id": "B",
+                "credits": "2",
+                "dates": [
+                    [
+                        "T"
+                    ]
+                ],
+                "times": [
+                    "930-1220"
+                ],
+                "building": [
+                    "*"
+                ],
+                "room": [
+                    "*"
+                ],
+                "instructor": [
+                    "Chi,Donald L"
+                ],
+                "status": "Open",
+                "enrollment": "0",
+                "enrollment_limit": "8E",
+                "grading": "CR/NC",
+                "course_fee": "",
+                "other": "RIDE SECTION - TAUGHT IN SPOKANE.",
+                "raw_string": "\nRestr  13397 B  2       T      930-1220   *    *        Chi,Donald L               Open      0/   8E CR/NC         B     \r\n                        RIDE SECTION - TAUGHT IN SPOKANE.                                                                                                                   \r\n"
+            }
+        ]
+    },
+    {
+        "code": "DENTFN 522",
+        "title": "FNDNS DENTAL MED 2",
+        "sections": [
+            {
+                "SLN": "13398",
+                "restrictions": "Restr",
+                "section_id": "A",
+                "credits": "2",
+                "dates": [
+                    [
+                        "W"
+                    ]
+                ],
+                "times": [
+                    "130-520"
+                ],
+                "building": [
+                    "HST"
+                ],
+                "room": [
+                    "T733"
+                ],
+                "instructor": [
+                    "Sotak,Nicholas"
+                ],
+                "status": "Open",
+                "enrollment": "0",
+                "enrollment_limit": "55E",
+                "grading": "",
+                "course_fee": "",
+                "other": "",
+                "raw_string": "\nRestr  13398 A  2       W      130-520    HST  T733     Sotak,Nicholas             Open      0/  55E               B     \r\n"
+            },
+            {
+                "SLN": "13399",
+                "restrictions": "Restr",
+                "section_id": "B",
+                "credits": "2",
+                "dates": [
+                    [
+                        "W"
+                    ]
+                ],
+                "times": [
+                    "130-520"
+                ],
+                "building": [
+                    "*"
+                ],
+                "room": [
+                    "*"
+                ],
+                "instructor": [
+                    "Sotak,Nicholas"
+                ],
+                "status": "Open",
+                "enrollment": "0",
+                "enrollment_limit": "8E",
+                "grading": "",
+                "course_fee": "",
+                "other": "RIDE SECTION - TAUGHT IN SPOKANE.",
+                "raw_string": "\nRestr  13399 B  2       W      130-520    *    *        Sotak,Nicholas             Open      0/   8E               B     \r\n                        RIDE SECTION - TAUGHT IN SPOKANE.                                                                                                                   \r\n"
+            }
+        ]
+    },
+    {
+        "code": "DENTFN 523",
+        "title": "ORAL HIST & EMB 1",
+        "sections": [
+            {
+                "SLN": "13400",
+                "restrictions": "Restr",
+                "section_id": "A",
+                "credits": "3",
+                "dates": [
+                    [
+                        "M"
+                    ],
+                    [
+                        "Th"
+                    ]
+                ],
+                "times": [
+                    "830-1150",
+                    "830-1150"
+                ],
+                "building": [
+                    "HST",
+                    "HST"
+                ],
+                "room": [
+                    "T733",
+                    "T733"
+                ],
+                "instructor": [
+                    "Popowics,Tracy",
+                    "Popowics,Tracy"
+                ],
+                "status": "Open",
+                "enrollment": "0",
+                "enrollment_limit": "55E",
+                "grading": "",
+                "course_fee": "",
+                "other": "Th     830-1150   HST  T733     Popowics,Tracy\r\nCOURSE WILL MEET MONDAYS FROM\r\n1/8/2024 THROUGH 3/11/2024.\r\n\r\nCOURSE WILL MEET THURSDAYS\r\nFROM 1/4/2024 THROUGH 1/25/2024.",
+                "raw_string": "\nRestr  13400 A  3       M      830-1150   HST  T733     Popowics,Tracy             Open      0/  55E               BJ    \r\n                        Th     830-1150   HST  T733     Popowics,Tracy\n                        COURSE WILL MEET MONDAYS FROM                                                                                                                       \r\n                        1/8/2024 THROUGH 3/11/2024.                                                                                                                         \r\n                                                                                                                                                                            \r\n                        COURSE WILL MEET THURSDAYS                                                                                                                          \r\n                        FROM 1/4/2024 THROUGH 1/25/2024.                                                                                                                    \r\n"
+            },
+            {
+                "SLN": "13401",
+                "restrictions": "Restr",
+                "section_id": "B",
+                "credits": "3",
+                "dates": [
+                    [
+                        "M"
+                    ],
+                    [
+                        "Th"
+                    ]
+                ],
+                "times": [
+                    "830-1150",
+                    "830-1150"
+                ],
+                "building": [
+                    "*",
+                    "*"
+                ],
+                "room": [
+                    "*",
+                    "*"
+                ],
+                "instructor": [
+                    "Case,Judd Alan",
+                    "Case,Judd Alan"
+                ],
+                "status": "Open",
+                "enrollment": "0",
+                "enrollment_limit": "8E",
+                "grading": "",
+                "course_fee": "",
+                "other": "Th     830-1150   *    *        Case,Judd Alan\r\nRIDE SECTION - COURSE TAUGHT IN\r\nSPOKANE.\r\nCOURSE WILL MEET MONDAYS FROM\r\n1/8/2024 THROUGH 3/11/2024.\r\n\r\nCOURSE WILL MEET THURSDAYS\r\nFROM 1/4/2024 THROUGH 1/25/2024.",
+                "raw_string": "\nRestr  13401 B  3       M      830-1150   *    *        Case,Judd Alan             Open      0/   8E               B     \r\n                        Th     830-1150   *    *        Case,Judd Alan\n                        RIDE SECTION - COURSE TAUGHT IN                                                                                                                     \r\n                        SPOKANE.                                                                                                                                            \r\n                        COURSE WILL MEET MONDAYS FROM                                                                                                                       \r\n                        1/8/2024 THROUGH 3/11/2024.                                                                                                                         \r\n                                                                                                                                                                            \r\n                        COURSE WILL MEET THURSDAYS                                                                                                                          \r\n                        FROM 1/4/2024 THROUGH 1/25/2024.                                                                                                                    \r\n"
+            }
+        ]
+    },
+    {
+        "code": "DENTFN 530",
+        "title": "BLOOD AI & NEOPLASIA",
+        "sections": [
+            {
+                "SLN": "13402",
+                "restrictions": "Restr",
+                "section_id": "A",
+                "credits": "4",
+                "dates": [
+                    [
+                        "M",
+                        "T",
+                        "Th",
+                        "F"
+                    ]
+                ],
+                "times": [
+                    "130-520"
+                ],
+                "building": [
+                    "HST"
+                ],
+                "room": [
+                    "T733"
+                ],
+                "instructor": [
+                    "Dean,David R."
+                ],
+                "status": "Open",
+                "enrollment": "0",
+                "enrollment_limit": "55E",
+                "grading": "",
+                "course_fee": "",
+                "other": "",
+                "raw_string": "\nRestr  13402 A  4       MTThF  130-520    HST  T733     Dean,David R.              Open      0/  55E               B     \r\n"
+            },
+            {
+                "SLN": "13403",
+                "restrictions": "Restr",
+                "section_id": "AA",
+                "credits": "QZ",
+                "dates": [
+                    [
+                        "M",
+                        "T",
+                        "Th",
+                        "F"
+                    ],
+                    [
+                        "M",
+                        "T",
+                        "Th",
+                        "F"
+                    ]
+                ],
+                "times": [
+                    "130-320",
+                    "330-520"
+                ],
+                "building": [
+                    "HST",
+                    "HST"
+                ],
+                "room": [
+                    "T474",
+                    "T478"
+                ],
+                "instructor": [
+                    "Dean,David R.",
+                    "Dean,David R."
+                ],
+                "status": "Open",
+                "enrollment": "0",
+                "enrollment_limit": "28E",
+                "grading": "",
+                "course_fee": "",
+                "other": "MTThF  330-520    HST  T478     Dean,David R.",
+                "raw_string": "\nRestr  13403 AA  QZ     MTThF  130-320    HST  T474     Dean,David R.              Open      0/  28E               B     \r\n                        MTThF  330-520    HST  T478     Dean,David R.\n"
+            },
+            {
+                "SLN": "13404",
+                "restrictions": "Restr",
+                "section_id": "AB",
+                "credits": "QZ",
+                "dates": [
+                    [
+                        "M",
+                        "T",
+                        "Th",
+                        "F"
+                    ],
+                    [
+                        "M",
+                        "T",
+                        "Th",
+                        "F"
+                    ]
+                ],
+                "times": [
+                    "130-320",
+                    "330-520"
+                ],
+                "building": [
+                    "HST",
+                    "HST"
+                ],
+                "room": [
+                    "T498",
+                    "T498"
+                ],
+                "instructor": [
+                    "Dean,David R.",
+                    "Dean,David R."
+                ],
+                "status": "Open",
+                "enrollment": "0",
+                "enrollment_limit": "27E",
+                "grading": "",
+                "course_fee": "",
+                "other": "MTThF  330-520    HST  T498     Dean,David R.",
+                "raw_string": "\nRestr  13404 AB  QZ     MTThF  130-320    HST  T498     Dean,David R.              Open      0/  27E               B     \r\n                        MTThF  330-520    HST  T498     Dean,David R.\n"
+            },
+            {
+                "SLN": "13405",
+                "restrictions": "Restr",
+                "section_id": "B",
+                "credits": "4",
+                "dates": [
+                    [
+                        "M",
+                        "T",
+                        "Th",
+                        "F"
+                    ]
+                ],
+                "times": [
+                    "130-520"
+                ],
+                "building": [
+                    "*"
+                ],
+                "room": [
+                    "*"
+                ],
+                "instructor": [
+                    "Dean,David R."
+                ],
+                "status": "Open",
+                "enrollment": "0",
+                "enrollment_limit": "8E",
+                "grading": "",
+                "course_fee": "",
+                "other": "RIDE SECTION - TAUGHT IN SPOKANE.",
+                "raw_string": "\nRestr  13405 B  4       MTThF  130-520    *    *        Dean,David R.              Open      0/   8E               B     \r\n                        RIDE SECTION - TAUGHT IN SPOKANE.                                                                                                                   \r\n"
+            },
+            {
+                "SLN": "13406",
+                "restrictions": "Restr",
+                "section_id": "BA",
+                "credits": "QZ",
+                "dates": [
+                    [
+                        "M",
+                        "T",
+                        "Th",
+                        "F"
+                    ]
+                ],
+                "times": [
+                    "330-520"
+                ],
+                "building": [
+                    "*"
+                ],
+                "room": [
+                    "*"
+                ],
+                "instructor": [
+                    "Dean,David R."
+                ],
+                "status": "Open",
+                "enrollment": "0",
+                "enrollment_limit": "8E",
+                "grading": "",
+                "course_fee": "",
+                "other": "RIDE QUIZ SECTION - TAUGHT IN\r\nSPOKANE.",
+                "raw_string": "\nRestr  13406 BA  QZ     MTThF  330-520    *    *        Dean,David R.              Open      0/   8E               B     \r\n                        RIDE QUIZ SECTION - TAUGHT IN                                                                                                                       \r\n                        SPOKANE.                                                                                                                                            \r\n"
+            }
+        ]
+    }
+]
