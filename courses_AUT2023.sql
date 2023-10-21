@@ -1,0 +1,1 @@
+SELECT * FROM courses_AUT2023;
