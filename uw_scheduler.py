@@ -158,6 +158,8 @@ for quarter in quarters:
         if courses:
             with open(output_file, "w") as json_file:
                 json.dump(courses, json_file, indent=4)
+        else:
+            print("No courses found for subject, operation aborted.")
 
     output_file = f"{filepath}{quarter}_COMPREHENSIVE_data.json"
     print(f"Writing comprehensive data for {quarter}...")
