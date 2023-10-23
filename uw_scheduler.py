@@ -110,6 +110,9 @@ for quarter in quarters:
 
                 restrictions = text[0:7].strip()
                 sln = text[7:14].strip()
+                # if sln contains ">', remove it
+                if sln[0] == '>':
+                    sln = sln[1:]
                 section_id = text[14:17].strip()
                 credits = text[17:25].strip()
                 if (text[25:43].strip() == 'to be arranged'):
@@ -149,6 +152,7 @@ for quarter in quarters:
                     'enrollment_limit': enrollment_limit,
                     'grading': grading,
                     'course_fee': course_fee,
+                    'modality': modality,
                     'other': other,
                     'raw_string': table.find('pre').text
                 })
