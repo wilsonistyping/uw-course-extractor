@@ -8,6 +8,8 @@ Base = declarative_base()
 class Course(Base):
     __tablename__ = 'courses_AUT2023'
     sln = Column("sln", Integer, primary_key=True)
+    subject_code = Column("subject_code", String)
+    course_code = Column("course_code", String)
     course_title = Column("course_title", String)
     restrictions = Column("restrictions", String)
     section_id = Column("section_id", String)
@@ -25,8 +27,10 @@ class Course(Base):
     modality = Column("modality", String)
     other = Column("other", String)
 
-def __init__(self, sln, course_title, restrictions, section_id, credits, dates, times, building, room, instructor, status, enrollment, enrollment_limit, grading, course_fee, modality, other):
+def __init__(self, sln, subject_code, course_code, course_title, restrictions, section_id, credits, dates, times, building, room, instructor, status, enrollment, enrollment_limit, grading, course_fee, modality, other):
     self.sln = sln
+    self.subject_code = subject_code
+    self.course_code = course_code
     self.course_title = course_title
     self.restrictions = restrictions
     self.section_id = section_id
@@ -62,7 +66,9 @@ with open(autumn_qtr_filepath, "r") as json_file:
             session.add(Course(
                 # turn section['SLN'] into an int
                 sln=int(section['SLN']),
-                course_title=course['title'],
+                subject_code=course['subject_code'],
+                course_code=course['course_code'],
+                course_title=course['course_title'],
                 restrictions=section['restrictions'],
                 section_id=section['section_id'],
                 credits=section['credits'],
