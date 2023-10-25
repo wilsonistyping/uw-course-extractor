@@ -8,7 +8,7 @@ from helpers import *
 # Initial setup
 filepath = "course_data/"
 
-# Find all valid quarters
+## Find all valid quarters
 base_page = 'https://www.washington.edu/students/timeschd/'
 page_to_scrape = requests.get(f'{base_page}')
 soup = BeautifulSoup(page_to_scrape.text, "html.parser")
@@ -22,12 +22,11 @@ if header:
     if ul:
         for a in ul.find_all('a', href=True):
             href = a['href']
-            # This gets the second-to-last part of the URL (grabs WIN2024 from /timeschd/WIN2024/)
-            qtr = href.split('/')[-2]
+            qtr = href.split('/')[-2]   # This gets the second-to-last part of the URL (grabs WIN2024 from /timeschd/WIN2024/)
             quarters.append(qtr)
 
 
-# Find all course pages for the quarter
+## Find all course pages for the quarter
 for quarter in quarters:
     base_page = f'https://www.washington.edu/students/timeschd/{quarter}/'
     page_to_scrape = requests.get(f'{base_page}')
@@ -40,8 +39,7 @@ for quarter in quarters:
     for ul in ul_elements:
         for a in ul.find_all('a', href=True):
             if a['href'].endswith('.html'):
-                # this removes the .html at the end of the file name (i.e. turns hcde.html into hcde)
-                subjects.append(a['href'][:-5])
+                subjects.append(a['href'][:-5]) # this removes the .html at the end of the file name (i.e. turns hcde.html into hcde)
 
     # subjects = list(set(subjects))  # remove duplicates and place in alphabetical order
     unique_subjects = []
@@ -51,13 +49,13 @@ for quarter in quarters:
     subjects = unique_subjects
     subjects = sorted(subjects)
 
+
     comprehensive_courses = []
-    # Create JSON file for each subject, by quarter
+    ## Create JSON file for each subject, by quarter
     for subject in subjects:
         print(f"Scraping {subject} for {quarter}...")
         output_file = f"{filepath}{quarter}_{subject}_data.json"
-        page_to_scrape = requests.get(
-            f'https://www.washington.edu/students/timeschd/{quarter}/{subject}.html')
+        page_to_scrape = requests.get(f'https://www.washington.edu/students/timeschd/{quarter}/{subject}.html')
         soup = BeautifulSoup(page_to_scrape.text, "html.parser")
 
         courses = []
@@ -67,31 +65,26 @@ for quarter in quarters:
 
         for table in tables:
             if is_title(table):
-                # parse text and separate
+                # parse text and separate into 'code' and 'title'
                 text = table.find('b').text.strip()
-                # subject and course
-                first_part = text.find('name')
                 text = text.replace('\xa0', ' ')
                 text = re.sub(r'\s+', ' ', text)
 
-                matches = re.match(r'(.*?)\s(\d+)\s(.+)', text)
+                matches = re.match(r'(\S+\s+\S+)\s+(.*)', text)
                 if matches:
-                    subject_code = matches.group(1)
-                    course_code = matches.group(2)
-                    course_title = matches.group(3)
+                    course_code = matches.group(1)
+                    course_title = matches.group(2)
 
                     current_course = {
-                        "subject_code": subject,
-                        'course_code': course_code,
-                        'course_title': course_title,
+                        'code': course_code,
+                        'title': course_title,
                         'sections': []
                     }
                     courses.append(current_course)
                     comprehensive_courses.append(current_course)
                 else:
-                    print(
-                        "ERROR: course_header title string didn't match expected pattern")
-
+                    print("ERROR: course_header title string didn't match expected pattern")
+                
             elif is_section(table) and current_course is not None:
                 # parse text and separate into:
                 # 'restrictions'
@@ -109,8 +102,8 @@ for quarter in quarters:
                 # 'course_fee'
                 # 'modality'
                 # 'other'
-
-                # making an assumption that properties will always be
+            
+                # making an assumption that properties will always be 
                 # within a certain index range due to the nature of <pre>,
                 # and extracting properties based on that assumption
                 text = table.find('pre').text
@@ -138,7 +131,7 @@ for quarter in quarters:
                 course_fee = text[108:116].strip()
                 modality = text[116:123].strip()
                 other = text[124:].strip()
-
+                
                 # formatting for 'other'
                 lines = other.splitlines()
                 stripped_lines = [line.strip() for line in lines]
@@ -162,8 +155,8 @@ for quarter in quarters:
                     'modality': modality,
                     'other': other,
                     'raw_string': table.find('pre').text
-                    # raw string should probably be removed in production
                 })
+                
 
         # Write to JSON file
         if courses:
@@ -176,3 +169,4 @@ for quarter in quarters:
     print(f"Writing comprehensive data for {quarter}...")
     with open(output_file, "w") as json_file:
         json.dump(comprehensive_courses, json_file, indent=4)
+
