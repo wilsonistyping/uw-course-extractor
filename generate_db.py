@@ -64,7 +64,6 @@ with open(autumn_qtr_filepath, "r") as json_file:
     for course in data:
         for section in course['sections']:
             session.add(Course(
-                # turn section['SLN'] into an int
                 sln=int(section['SLN']),
                 subject_code=course['subject_code'],
                 course_code=course['course_code'],

@@ -67,23 +67,20 @@ for quarter in quarters:
 
         for table in tables:
             if is_title(table):
-                # parse text and separate
-                text = table.find('b').text.strip()
-                # subject and course
-                first_part = text.find('name')
-                text = text.replace('\xa0', ' ')
-                text = re.sub(r'\s+', ' ', text)
+                text = table.find('b').text
 
-                matches = re.match(r'(.*?)\s(\d+)\s(.+)', text)
+                matches = re.match(r'(.*?)\s{3}(.*?)\s{1,2}(.+)', text)
                 if matches:
                     subject_code = matches.group(1)
                     course_code = matches.group(2)
                     course_title = matches.group(3)
 
                     current_course = {
-                        "subject_code": subject,
+                        'subject': subject,
+                        'subject_code': subject_code,
                         'course_code': course_code,
                         'course_title': course_title,
+                        'raw_text': text,
                         'sections': []
                     }
                     courses.append(current_course)
