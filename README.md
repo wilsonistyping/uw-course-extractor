@@ -1,5 +1,5 @@
 # What is this?
-This was a weekend prototype for learning BeautifulSoup, sqlite, and SQLAlchemy. 
+This was a weekend prototype for learning BeautifulSoup. 
 
 At a high level, this visits the University of Washington time schedule and evaluates the rawtext using regex to parse out various course data.
 
